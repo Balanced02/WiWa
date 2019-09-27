@@ -1,24 +1,10 @@
 import React, {Component} from 'react';
 import {SafeAreaView} from 'react-native';
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
 import {Provider} from 'react-redux';
-import LoginScreen from './src/Screens/Auth/Login';
 
-import store from './store';
+import AppContainer from './src/navigation/AppNavigator';
 
-const AppNavigator = createStackNavigator(
-  {
-    Login: {
-      screen: LoginScreen,
-    },
-  },
-  {
-    headerMode: 'none',
-  },
-);
-
-const AppContainer = createAppContainer(AppNavigator);
+import store from './store'
 
 class App extends Component {
   render() {

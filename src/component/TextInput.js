@@ -5,8 +5,10 @@ import {
   Platform,
   TouchableWithoutFeedback,
   View,
+  Image,
 } from 'react-native';
 import colors from '../colors';
+import fonts from '../fonts';
 
 class FloatingLabelInput extends Component {
   constructor(props) {
@@ -19,6 +21,7 @@ class FloatingLabelInput extends Component {
 
   handleFocus = () => this.setState({isFocused: true});
   handleBlur = () => this.setState({isFocused: false});
+  focusInput = () => this[this.props.name].focus();
 
   componentDidUpdate() {
     Animated.timing(this._animatedIsFocused, {
@@ -28,13 +31,14 @@ class FloatingLabelInput extends Component {
   }
 
   render() {
-    const {label, ...props} = this.props;
+    const {label, icon, ...props} = this.props;
     const outputRange = [
       Platform.OS === 'ios' ? 18 : 15,
       Platform.OS === 'ios' ? 0 : -5,
     ];
     const labelStyle = {
       position: 'absolute',
+      fontFamily: fonts.text,
       left: 0,
       top: this._animatedIsFocused.interpolate({
         inputRange: [0, 1],
@@ -50,7 +54,7 @@ class FloatingLabelInput extends Component {
       }),
     };
     return (
-      <TouchableWithoutFeedback onPress={() => this.input.focus()}>
+      <TouchableWithoutFeedback onPress={this.focusInput}>
         <View
           style={{
             paddingTop: Platform.OS === 'ios' ? 18 : 0,
@@ -58,9 +62,11 @@ class FloatingLabelInput extends Component {
           <Animated.Text style={labelStyle}>{label}</Animated.Text>
           <TextInput
             {...props}
-            ref={input => (this.input = input)}
+            enablesReturnKeyAutomatically={true}
+            ref={input => (this[props.name] = input)}
             style={{
               // height: 26,
+              fontFamily: fonts.text,
               fontSize: 14,
               color: '#000',
               paddingBottom: Platform.OS === 'ios' ? 0 : 1,
@@ -71,6 +77,16 @@ class FloatingLabelInput extends Component {
             onBlur={this.handleBlur}
             blurOnSubmit
           />
+          {icon ? (
+            <View
+              style={{
+                top: -25,
+                display: 'flex',
+                marginLeft: '91%',
+              }}>
+              <Image source={icon} />
+            </View>
+          ) : null}
         </View>
       </TouchableWithoutFeedback>
     );
