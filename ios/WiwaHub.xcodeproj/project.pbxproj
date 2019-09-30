@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* WiwaHubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WiwaHubTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -15,15 +16,16 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* WiwaHubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WiwaHubTests.m */; };
+		399112B11BE44F5BB1954BDD /* NunitoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82F9D439969D47F1B8DA771E /* NunitoSans-SemiBold.ttf */; };
 		448998EB7FDF85CBA7444206 /* libPods-WiwaHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D40D55040B97EC3872893F /* libPods-WiwaHub.a */; };
 		7002F59D669A8026A2F24D8E /* libPods-WiwaHub-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CF971E7DE1C7002D758D2F /* libPods-WiwaHub-tvOSTests.a */; };
 		95F64A007D96E645063C398D /* libPods-WiwaHubTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E649D82961C0FB1DAA0E6C6 /* libPods-WiwaHubTests.a */; };
-		B5F714C02429C0E0FB1DF675 /* libPods-WiwaHub-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DC509E340F9B3C6BACC9F6 /* libPods-WiwaHub-tvOS.a */; };
-		CB4D659E939F4E2C86147396 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F7B265E7C774477AD0FB96E /* FredokaOne-Regular.ttf */; };
-		E495E99836A64E3BBB87026C /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9122C6ACBB843B58B1AEBBC /* NunitoSans-Black.ttf */; };
-		C03FF275A4134B0CB8DCC4CA /* NunitoSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FDFF79990F242D0A32AFA69 /* NunitoSans-Light.ttf */; };
 		A07D1B5EAEF041AC9D5BCBBC /* NunitoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF12D2CCA9240FC8D735591 /* NunitoSans-Regular.ttf */; };
-		399112B11BE44F5BB1954BDD /* NunitoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82F9D439969D47F1B8DA771E /* NunitoSans-SemiBold.ttf */; };
+		B5F714C02429C0E0FB1DF675 /* libPods-WiwaHub-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DC509E340F9B3C6BACC9F6 /* libPods-WiwaHub-tvOS.a */; };
+		C03FF275A4134B0CB8DCC4CA /* NunitoSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FDFF79990F242D0A32AFA69 /* NunitoSans-Light.ttf */; };
+		CB4D659E939F4E2C86147396 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F7B265E7C774477AD0FB96E /* FredokaOne-Regular.ttf */; };
+		E0C6368A233E996E0040269F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0C63689233E996E0040269F /* GoogleService-Info.plist */; };
+		E495E99836A64E3BBB87026C /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9122C6ACBB843B58B1AEBBC /* NunitoSans-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,26 +58,27 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WiwaHub/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WiwaHub/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WiwaHub/main.m; sourceTree = "<group>"; };
+		1F7B265E7C774477AD0FB96E /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FredokaOne-Regular.ttf"; path = "../assets/fonts/FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		22D86979E4AB9B8621B202CA /* Pods-WiwaHub-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiwaHub-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiwaHub-tvOSTests/Pods-WiwaHub-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		27DC509E340F9B3C6BACC9F6 /* libPods-WiwaHub-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WiwaHub-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* WiwaHub-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WiwaHub-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* WiwaHub-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WiwaHub-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C221504932F81FF9C496F1D /* Pods-WiwaHub-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiwaHub-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiwaHub-tvOS/Pods-WiwaHub-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		54A41BE000DEF7AB6B0D247E /* Pods-WiwaHub-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiwaHub-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiwaHub-tvOSTests/Pods-WiwaHub-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		5FDFF79990F242D0A32AFA69 /* NunitoSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NunitoSans-Light.ttf"; path = "../assets/fonts/NunitoSans-Light.ttf"; sourceTree = "<group>"; };
+		82F9D439969D47F1B8DA771E /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NunitoSans-SemiBold.ttf"; path = "../assets/fonts/NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		8BA522B4BB22F842E013E47B /* Pods-WiwaHub-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiwaHub-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiwaHub-tvOS/Pods-WiwaHub-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8E362045DC43CA23A8346B16 /* Pods-WiwaHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiwaHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiwaHub/Pods-WiwaHub.release.xcconfig"; sourceTree = "<group>"; };
 		8E649D82961C0FB1DAA0E6C6 /* libPods-WiwaHubTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WiwaHubTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B5C24298C8FB1E17C4885E /* Pods-WiwaHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiwaHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiwaHub/Pods-WiwaHub.debug.xcconfig"; sourceTree = "<group>"; };
 		9F20040ABF3E96B31DDD3272 /* Pods-WiwaHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiwaHubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiwaHubTests/Pods-WiwaHubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5CF971E7DE1C7002D758D2F /* libPods-WiwaHub-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WiwaHub-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF12D2CCA9240FC8D735591 /* NunitoSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NunitoSans-Regular.ttf"; path = "../assets/fonts/NunitoSans-Regular.ttf"; sourceTree = "<group>"; };
 		DBE0E9164D9AD637E5A19BB1 /* Pods-WiwaHubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiwaHubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiwaHubTests/Pods-WiwaHubTests.release.xcconfig"; sourceTree = "<group>"; };
+		E0C63689233E996E0040269F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		1F7B265E7C774477AD0FB96E /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; name = "FredokaOne-Regular.ttf"; path = "../assets/fonts/FredokaOne-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F9122C6ACBB843B58B1AEBBC /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; name = "NunitoSans-Black.ttf"; path = "../assets/fonts/NunitoSans-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5FDFF79990F242D0A32AFA69 /* NunitoSans-Light.ttf */ = {isa = PBXFileReference; name = "NunitoSans-Light.ttf"; path = "../assets/fonts/NunitoSans-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DAF12D2CCA9240FC8D735591 /* NunitoSans-Regular.ttf */ = {isa = PBXFileReference; name = "NunitoSans-Regular.ttf"; path = "../assets/fonts/NunitoSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		82F9D439969D47F1B8DA771E /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; name = "NunitoSans-SemiBold.ttf"; path = "../assets/fonts/NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F9122C6ACBB843B58B1AEBBC /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NunitoSans-Black.ttf"; path = "../assets/fonts/NunitoSans-Black.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,7 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				E0C63689233E996E0040269F /* GoogleService-Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = WiwaHub;
@@ -208,7 +212,7 @@
 			sourceTree = "<group>";
 		};
 		F7FAF895544E4DFE808FEED1 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				1F7B265E7C774477AD0FB96E /* FredokaOne-Regular.ttf */,
 				F9122C6ACBB843B58B1AEBBC /* NunitoSans-Black.ttf */,
@@ -218,7 +222,6 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -252,6 +255,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				8BCDA9BE4773288A7D799B25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -330,6 +334,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -359,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				E0C6368A233E996E0040269F /* GoogleService-Info.plist in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				CB4D659E939F4E2C86147396 /* FredokaOne-Regular.ttf in Resources */,
 				E495E99836A64E3BBB87026C /* NunitoSans-Black.ttf in Resources */,
@@ -456,6 +462,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BCDA9BE4773288A7D799B25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WiwaHub/Pods-WiwaHub-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WiwaHub/Pods-WiwaHub-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F0683D133B4C19B6B2025533 /* [CP] Check Pods Manifest.lock */ = {
@@ -663,7 +691,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.balanced.wiwahub;
 				PRODUCT_NAME = WiwaHub;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -683,7 +711,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.balanced.wiwahub;
 				PRODUCT_NAME = WiwaHub;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

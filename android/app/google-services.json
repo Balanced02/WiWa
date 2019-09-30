@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1023454591923",
+    "firebase_url": "https://wiwahub.firebaseio.com",
+    "project_id": "wiwahub",
+    "storage_bucket": "wiwahub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023454591923:android:0b9b3c6e2f7d457e63e9c6",
+        "android_client_info": {
+          "package_name": "com.wiwahub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023454591923-q4l9m2gf03lfmcfl6pm6kuvg5l1k630i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIJVAGyPlswVzmmnynLVyLL4UntTfH1KY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023454591923-q4l9m2gf03lfmcfl6pm6kuvg5l1k630i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1023454591923-uumo5gm69cngu9777f9569tb8ha989c2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.balanced.wiwahub"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

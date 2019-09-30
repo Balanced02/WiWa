@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   ScrollView,
   View,
@@ -7,6 +7,9 @@ import {
   ImageBackground,
   KeyboardAvoidingView,
 } from 'react-native';
+
+import { LoginManager, AccessToken, } from 'react-native-fbsdk'
+
 import Background from '../../../assets/images/background.png';
 
 import TextInput from '../../component/TextInput';
@@ -24,10 +27,10 @@ import facebookIcon from '../../../assets/images/facebook.png';
 import twitterIcon from '../../../assets/images/twitter.png';
 import googleIcon from '../../../assets/images/google.png';
 
-import {RightLogo} from '../../component/Logo';
+import { RightLogo } from '../../component/Logo';
 
 import colors from '../../colors';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 class LoginScreen extends Component {
   constructor(props) {
@@ -56,19 +59,40 @@ class LoginScreen extends Component {
     }));
   };
 
+  login = () => {
+    LoginManager.logInWithPermissions(["public_profile", "email"]).then(result => {
+      console.log(result)
+      if (result.isCancelled) {
+        console.log("Login cancelled");
+      } else {
+        console.log(
+          "Login success with permissions: " +
+          result.grantedPermissions.toString()
+        );
+        AccessToken.getCurrentAccessToken().then(token => {
+          console.log(token.accessToken)
+        })
+      }
+    },
+      (error) => {
+        console.log("Login fail with error: " + error);
+      }
+    );
+  }
+
   render() {
     const {
-      inputs: {username, password},
+      inputs: { username, password },
       checked,
     } = this.state;
     return (
-      <ImageBackground source={Background} style={{flex: 1}}>
-        <View style={{flex: 1, paddingLeft: 50, paddingRight: 50}}>
-          <ScrollView style={{flex: 1}}>
-            <KeyboardAvoidingView style={{flex: 1}} behavior="position">
-              <View style={{paddingTop: 50}} />
+      <ImageBackground source={Background} style={{ flex: 1 }}>
+        <View style={{ flex: 1, paddingLeft: 50, paddingRight: 50 }}>
+          <ScrollView style={{ flex: 1 }}>
+            <KeyboardAvoidingView style={{ flex: 1 }} behavior="position">
+              <View style={{ paddingTop: 50 }} />
               <RightLogo />
-              <View style={{paddingTop: 30}} />
+              <View style={{ paddingTop: 30 }} />
               <Fragment>
                 <Image source={loginImage} />
               </Fragment>
@@ -85,7 +109,7 @@ class LoginScreen extends Component {
               <View style={styles.spacer} />
               <View style={styles.spacer} />
               <View style={styles.spacer} />
-              <View style={{flex: 1}}>
+              <View style={{ flex: 1 }}>
                 <TextInput
                   editable
                   maxLength={40}
@@ -145,10 +169,10 @@ class LoginScreen extends Component {
                 <View style={styles.spacer} />
                 <View style={styles.spacer} />
                 <View style={styles.spacer} />
-                <View style={{alignItems: 'center'}}>
+                <View style={{ alignItems: 'center' }}>
                   <TouchableOpacity
                     style={styles.submitButton}
-                    onPress={() => this.props.navigation.navigate('Main')}>
+                    onPress={this.login}>
                     <Text style={styles.submitButtonText}>Login</Text>
                   </TouchableOpacity>
                 </View>
@@ -157,7 +181,7 @@ class LoginScreen extends Component {
                 <View style={styles.spacer} />
                 <View style={styles.spacer} />
                 <View style={styles.spacer} />
-                <View style={{alignItems: 'center'}}>
+                <View style={{ alignItems: 'center' }}>
                   <Text style={styles.otherAuth}>Or login with:</Text>
                   <View style={styles.spacer} />
                   <View style={styles.spacer} />

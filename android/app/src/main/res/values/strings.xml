@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WiwaHub</string>
+    <string name="facebook_app_id">516704955783881</string>
+    <string name="fb_login_protocol_scheme">fb516704955783881</string>
 </resources>
