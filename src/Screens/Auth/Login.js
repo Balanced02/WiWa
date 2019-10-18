@@ -8,7 +8,7 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 
-import { LoginManager, AccessToken, } from 'react-native-fbsdk'
+import { LoginManager, GraphRequest, GraphRequestManager } from 'react-native-fbsdk'
 
 import Background from '../../../assets/images/background.png';
 
@@ -69,9 +69,24 @@ class LoginScreen extends Component {
           "Login success with permissions: " +
           result.grantedPermissions.toString()
         );
-        AccessToken.getCurrentAccessToken().then(token => {
-          console.log(token.accessToken)
-        })
+        let _responseInfoCallback = (error, result) => {
+          if (error) {
+            console.log(error)
+            console.log('Error fetching data: ' + error.toString());
+          } else {
+            console.log(result)
+            console.log('Success fetching data: ' + result.toString());
+          }
+        }
+
+        // Create a graph request asking for user information with a callback to handle the response.
+        const infoRequest = new GraphRequest(
+          '/me',
+          null,
+          _responseInfoCallback,
+        );
+        // Start the graph request.
+        new GraphRequestManager().addRequest(infoRequest).start();
       }
     },
       (error) => {
