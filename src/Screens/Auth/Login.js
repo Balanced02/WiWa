@@ -75,6 +75,7 @@ class LoginScreen extends Component {
             console.log('Error fetching data: ' + error.toString());
           } else {
             console.log(result)
+            this.props.navigation.navigate("Main")
             console.log('Success fetching data: ' + result.toString());
           }
         }
@@ -102,9 +103,9 @@ class LoginScreen extends Component {
     } = this.state;
     return (
       <ImageBackground source={Background} style={{ flex: 1 }}>
-        <View style={{ flex: 1, paddingLeft: 50, paddingRight: 50 }}>
-          <ScrollView style={{ flex: 1 }}>
-            <KeyboardAvoidingView style={{ flex: 1 }} behavior="position">
+        <View style={{ flex: 1 }}>
+          <ScrollView style={{ flex: 1, paddingLeft: 50, paddingRight: 50 }} showsVerticalScrollIndicator={false} >
+            <KeyboardAvoidingView style={{ flex: 1 }} behavior="padding">
               <View style={{ paddingTop: 50 }} />
               <RightLogo />
               <View style={{ paddingTop: 30 }} />
@@ -144,6 +145,7 @@ class LoginScreen extends Component {
                   onChangeText={text =>
                     this.handleInputChange(text, 'username')
                   }
+                  blurOnSubmit={false}
                 />
                 <TextInput
                   ref={passwordInput => (this.passwordInput = passwordInput)}

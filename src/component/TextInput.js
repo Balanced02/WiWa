@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   TextInput,
   Animated,
@@ -6,6 +6,7 @@ import {
   TouchableWithoutFeedback,
   View,
   Image,
+  TouchableOpacity
 } from 'react-native';
 import colors from '../colors';
 import fonts from '../fonts';
@@ -15,12 +16,13 @@ class FloatingLabelInput extends Component {
     super(props);
     this.state = {
       isFocused: false,
+      secureTextInput: props.secureTextEntry
     };
     this._animatedIsFocused = new Animated.Value(props.value === '' ? 0 : 1);
   }
 
-  handleFocus = () => this.setState({isFocused: true});
-  handleBlur = () => this.setState({isFocused: false});
+  handleFocus = () => this.setState({ isFocused: true });
+  handleBlur = () => this.setState({ isFocused: false });
   focusInput = () => this[this.props.name].focus();
 
   componentDidUpdate() {
@@ -31,7 +33,8 @@ class FloatingLabelInput extends Component {
   }
 
   render() {
-    const {label, icon, ...props} = this.props;
+    const { label, icon, ...props } = this.props;
+    const { secureTextInput } = this.state
     const outputRange = [
       Platform.OS === 'ios' ? 18 : 15,
       Platform.OS === 'ios' ? 0 : -5,
@@ -62,6 +65,7 @@ class FloatingLabelInput extends Component {
           <Animated.Text style={labelStyle}>{label}</Animated.Text>
           <TextInput
             {...props}
+            secureTextEntry={props.secureTextEntry ? secureTextInput : false}
             enablesReturnKeyAutomatically={true}
             ref={input => (this[props.name] = input)}
             style={{
@@ -75,17 +79,27 @@ class FloatingLabelInput extends Component {
             }}
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
-            blurOnSubmit
           />
           {icon ? (
-            <View
-              style={{
-                top: -25,
-                display: 'flex',
-                marginLeft: '91%',
-              }}>
-              <Image source={icon} />
-            </View>
+            props.secureTextEntry ? <TouchableOpacity style={{
+              top: -25,
+              display: 'flex',
+              marginLeft: '91%',
+            }} onPress={() => {
+              this.setState(prevState => ({ secureTextInput: !prevState.secureTextInput }))
+            }} >
+              <View>
+                <Image source={icon} />
+              </View>
+            </TouchableOpacity> :
+              <View
+                style={{
+                  top: -25,
+                  display: 'flex',
+                  marginLeft: '91%',
+                }}>
+                <Image source={icon} />
+              </View>
           ) : null}
         </View>
       </TouchableWithoutFeedback>
