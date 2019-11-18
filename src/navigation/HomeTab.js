@@ -73,14 +73,14 @@ const TabNavigator = createMaterialTopTabNavigator(
         padding: 0,
       },
       tabStyle: {
-        width: 100,
+        // width: 100,
       },
       activeTintColor: colors.theme,
       inactiveTintColor: colors.gray,
       showLabel: true,
       upperCaseLabel: false,
       keyboardHidesTabBar: true,
-      scrollEnabled: true,
+      // scrollEnabled: true,
     },
   },
 );

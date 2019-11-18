@@ -60,40 +60,41 @@ class LoginScreen extends Component {
   };
 
   login = () => {
-    LoginManager.logInWithPermissions(["public_profile", "email"]).then(result => {
-      console.log(result)
-      if (result.isCancelled) {
-        console.log("Login cancelled");
-      } else {
-        console.log(
-          "Login success with permissions: " +
-          result.grantedPermissions.toString()
-        );
-        let _responseInfoCallback = (error, result) => {
-          if (error) {
-            console.log(error)
-            console.log('Error fetching data: ' + error.toString());
-          } else {
-            console.log(result)
-            this.props.navigation.navigate("Main")
-            console.log('Success fetching data: ' + result.toString());
-          }
-        }
+    // LoginManager.logInWithPermissions(["public_profile", "email"]).then(result => {
+    //   console.log(result)
+    //   if (result.isCancelled) {
+    //     console.log("Login cancelled");
+    //   } else {
+    //     console.log(
+    //       "Login success with permissions: " +
+    //       result.grantedPermissions.toString()
+    //     );
+    //     let _responseInfoCallback = (error, result) => {
+    //       if (error) {
+    //         console.log(error)
+    //         console.log('Error fetching data: ' + error.toString());
+    //       } else {
+    //         console.log(result)
+    //         this.props.navigation.navigate("Main")
+    //         console.log('Success fetching data: ' + result.toString());
+    //       }
+    //     }
 
-        // Create a graph request asking for user information with a callback to handle the response.
-        const infoRequest = new GraphRequest(
-          '/me',
-          null,
-          _responseInfoCallback,
-        );
-        // Start the graph request.
-        new GraphRequestManager().addRequest(infoRequest).start();
-      }
-    },
-      (error) => {
-        console.log("Login fail with error: " + error);
-      }
-    );
+    //     // Create a graph request asking for user information with a callback to handle the response.
+    //     const infoRequest = new GraphRequest(
+    //       '/me',
+    //       null,
+    //       _responseInfoCallback,
+    //     );
+    //     // Start the graph request.
+    //     new GraphRequestManager().addRequest(infoRequest).start();
+    //   }
+    // },
+    //   (error) => {
+    //     console.log("Login fail with error: " + error);
+    //   }
+    // );
+    this.props.navigation.navigate('Main')
   }
 
   render() {
